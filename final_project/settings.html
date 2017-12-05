@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AVI-SPL | Connect</title>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <header>
+    <button class="back"> <i class="fa fa-chevron-left" aria-hidden="true"></i> Back </button>
+    <button>End meeting</button>
+    <h4>Date  Time</h4>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="">Audio Volume</a></li>
+      <li><a href="">In Room Camera</a></li>
+    </ul>
+  </nav>
+  <main>
+    <div id="audioVolume">
+      <div id="primary">
+        <p>Presentation Source</p>
+        <input type="range" orient="vertical" />
+        <p>Audio Call</p>
+        <input type="range" orient="vertical" />
+        <p>Video Call</p>
+        <input type="range" orient="vertical" />
+      </div>
+      <aside>
+        <button>Reset to Defaults</button>
+      </aside>
+    </div>
+
+    <div id="roomCameras">
+      <div id="primary">
+        <div class="dropdown">
+          <p>In Room Camera Presets</p>
+          <button class="dropbtn"> Preset </button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#">Preset 1</a>
+            <a href="#">Preset 2</a>
+            <a href="#">Preset 3</a>
+          </div>
+        </div>
+        <div id="control">
+          <button> <i class="fa fa-search-minus" aria-hidden="true"></i></button>
+          <div id="dpad">
+            <div>
+            <button class="dpadArrowUp"></button>
+            <i class="fa fa-video-camera" aria-hidden="true"></i>
+            <button class="dpadArrowDown"></button>
+            </div>
+            <button class="dpadArrowRight"></button>
+            <button class="dpadArrowLeft"></button>
+          </div>
+          <button> <i class="fa fa-search-plus" aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <aside>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div>
+      <button class="footer-btn"> <i class="fa fa-volume-up" aria-hidden="true"></i></button>
+      <button class="footer-btn"> <i class="fa fa-microphone" aria-hidden="true"></i> </button>
+    </div>
+    <div>
+      <button class="footer-btn"> <i class="fa fa-cog" aria-hidden="true"></i></button>
+      <button class="footer-btn"> <i class="fa fa-question-circle-o" aria-hidden="true"></i></button>
+    </div>
+  </footer>
+
+  <script src="js/jquery-1.12.0.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

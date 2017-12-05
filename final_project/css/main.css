@@ -1,0 +1,35 @@
+
+/* --------------------------------------------------------------------------
+Base styles:
+----------------------------------------------------------------------------- */
+/* Fix to include padding and border in the total width for each element */
+* {
+  box-sizing: border-box;
+}
+
+/* Fix for responsive images */
+img {
+  max-width: 100%;
+}
+/* -----------------------
+--------------------------
+Sliders
+--------------------------
+-------------------------- */
+input[type=range][orient=vertical] {
+    -webkit-appearance: none;
+    -webkit-appearance: slider-vertical;/*if we remove this slider-vertical then horizondally range bar styles applies correctly*/
+}
+input[type=range][orient=vertical]::-webkit-slider-runnable-track {
+    background: #22A7F0;
+    border: none;
+    border-radius: 10px;
+    width: 10px;
+}
+input[type=range]::-webkit-slider-thumb {
+ /*all the below  css properties **not** applies to thumb*/
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color : black;
+}

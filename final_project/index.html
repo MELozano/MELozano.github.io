@@ -7,105 +7,186 @@
   <title>AVI-SPL | Connect</title>
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/ionicons.css">
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body onload="startTime()">
   <!-- Add your site content here. Keep it pretty and use indentation :) -->
 
   <!-- HINT: Need to link to another page? Create a file with an html extension in your main project folder. -->
   <!-- Then link to it using an anchor. for example: <a href="blog.html">Blog</a> -->
   <header>
-    <img src="" alt="logo">
-    <h1>Room Name</h1>
-    <h3>123 456 7890<h3>
-      <button id="endMeeting">End meeting</button>
-      <h4>Date  Time</h4>
-    </header>
+    <div class="headerFirst">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1415.31 239.33"><defs><style>.cls-1{fill:#005596;}.cls-2{fill:#8dc63f;}</style></defs><title>avispl_logo</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M1388.67,32.47c14.89,0,26.64,11,26.64,26.12s-11.75,26-26.64,26-26.52-10.84-26.52-26S1373.91,32.47,1388.67,32.47Zm0,45.85c11.23,0,20.24-8.1,20.24-19.73s-9-19.85-20.24-19.85-20.12,8.36-20.12,19.85S1377.43,78.32,1388.67,78.32Zm-9.4-33.44h11.49c4.31,0,7.58,2.74,7.58,8.1,0,3.52-1.18,6.92-4.58,7.84l7.06,10.7h-6.67l-6.66-10.19h-2.22V71.52h-6Zm9.79,4.83h-3.79V56.5h3.66c2.22,0,3.4-.91,3.4-3.52C1392.33,50.75,1391.41,49.71,1389.06,49.71Z"/><polygon class="cls-1" points="615.08 177.76 604.98 183.38 489.73 119.67 603.74 55.96 719.27 119.71 693.42 134.1 743.87 161.99 820.14 119.5 603.59 0 389.04 119.9 605.08 239.33 665.53 205.65 615.08 177.76"/><polygon class="cls-2" points="743.57 61.58 753.67 55.95 868.92 119.67 754.91 183.37 639.39 119.62 665.23 105.22 614.79 77.33 538.51 119.83 755.07 239.33 969.62 119.43 753.58 0 693.12 33.69 743.57 61.58"/><path class="cls-1" d="M50.4,36.16h60.28l50.4,167H117.6l-8.4-27.92H51.88l-8.4,27.92H0Zm11.86,104H98.58l-12.85-43c-1.48-5.19-3-12.61-3-12.61h-4.7a121.84,121.84,0,0,1-2.72,12.61Z"/><path class="cls-1" d="M141.33,36.16h43.73l29.4,99.56c1.49,5.19,5.68,26.44,5.68,26.44h4c.25-1,4.44-22.73,5.43-26.44l29.65-99.56h43.73l-50.4,167H191.73Z"/><path class="cls-1" d="M319.48,36.16H362v167h-42.5Z"/><path class="cls-1" d="M1051.9,206.88c-24.71,0-49.91-8.15-61.77-14.08L997.79,159c15.07,6.67,33.35,11.86,49.66,11.86,11.86,0,20.75-5.44,20.75-17.05,0-8.15-4.2-13.59-14.57-16.06l-18-4.2c-26.93-6.17-47.43-16.8-47.43-49.16,0-31.13,21-51.88,61-51.88,20.75,0,40.52,6.66,50.4,11.6L1088,77.91c-6.42-2.72-21.5-9.38-37.31-9.38-12.1,0-19,6.17-19,14.82,0,7.91,5.19,11.61,10.62,12.85l20,4.69c29.16,6.91,49.42,18.53,49.42,50.65C1111.69,180.94,1096.61,206.88,1051.9,206.88Z"/><path class="cls-1" d="M1169,150.8v52.37h-42.5v-167h64.24c17.79,0,31.62,5.19,41.26,14.08,10.87,10.38,17.78,25.94,17.78,44.48,0,18.77-6.91,33.35-17.53,43.23-8.65,7.66-21.25,12.85-41.51,12.85Zm33.6-74.87c-3.21-3-7.42-4.69-13.1-4.69H1169v44.47h20.5a18,18,0,0,0,13.1-5.19c3.21-3.21,4.69-9.63,4.69-17.53S1205.83,79.15,1202.62,75.93Z"/><path class="cls-1" d="M1266.12,36.16h42.5V168.09h58.55v35.08H1266.12Z"/></g></g></svg>
+    </div>
+    <div>
+      <h1>Common Room Name</h1>
+      <h3><strong>Room Phone</strong> 123 456 7890</h3>
+    </div>
+    <div>
+      <span id="txt"></span>
+      <h3><span id="date"></span></h3>
+    </div>
+    <div class="headerLast">
+      <button id="endMeeting">End meeting <i class="icon ion-power"></i></button>
+    </div>
+  </header>
+  <main>
     <nav>
-      <ul>
-        <li><a href="" id="navPresentation">Presentation</a></li>
-        <li><a href="" id="navPhone">Phone</a></li>
-        <li><a href="" id="navVideo">Video</a></li>
-      </ul>
+      <div id="navPrsbtn" class="navItem">
+        <button class="navPresentation"><i class="ion-ios-monitor-outline"></i><p>Presentation</p></button>
+      </div>
+      <div id="navPhonebtn" class="navItem">
+        <button><i class="ion-ios-telephone-outline"></i><p>Phone</p></button>
+      </div>
+      <div id="navVideobtn" class="navItem">
+        <button><i class="ion-ios-videocam-outline"></i><p>Video</p></button>
+      </div>
     </nav>
-    <main>
-      <section id="presentation">
-          <div id="primary">
-            <p>1) Instructional Text</p>
-            <button class="source"></button><h3>Label</h3>
-            <button class="source"></button><h3>Label</h3>
-          </div>
-      </section>
-      <section id="phone">
-        <div id="primary">
-          <input type="text">
-          <div id="keypad">
-            <button>1</button>
-            <button>2<br>abc</button>
-            <button>3<br>def</button>
-            <button>4<br>ghi</button>
-            <button>5<br>jkl</button>
-            <button>6<br>mno</button>
-            <button>7<br>pqrs</button>
-            <button>8<br>tuv</button>
-            <button>9<br>wxyz</button>
-            <button>*</button>
-            <button>0</button>
-            <button>#</button>
-          </div>
+    <section id="presentation">
+      <div id="primary">
+        <div class="presentationItem">
+          <button class="source"><i class="icon ion-laptop"></i></button><h3>HDMI 1</h3>
+        </div>
+        <div class="presentationItem">
+          <button class="source"><i class="icon ion-laptop"></i></button><h3>HDMI 2</h3>
+        </div>
+      </div>
+      <aside>
+        <br>
+      </aside>
+    </section>
+    <section id="phone">
+      <div id="primary">
+        <div class="textInput">
+          <input type="text" id="inputPhone" placeholder="Dial Phone #">
+          <button class="transparentButton"><i class="ion-backspace-outline"></i></button>
+        </div>
+        <div class="keypad">
+          <button>1</button>
+          <button>2<span class="alpha">abc</span></button>
+          <button>3<span class="alpha">def</span></button>
+          <button>4<span class="alpha">ghi</span></button>
+          <button>5<span class="alpha">jkl</span></button>
+          <button>6<span class="alpha">mno</span></button>
+          <button>7<span class="alpha">pqrs</span></button>
+          <button>8<span class="alpha">tuv</span></button>
+          <button>9<span class="alpha">wxyz</span></button>
+          <button>*</button>
+          <button>0</button>
+          <button>#</button>
+        </div>
+        <button id="callBtn" class="green"><i class="ion-ios-telephone-outline"></i>Call</button>
+      </div>
+      <aside id="addCall">
+        <button id="addCallBtn"><i class="ion-ios-personadd-outline"></i><p>Add Call</p></button>
+        <hr>
+      </aside>
+    </section>
+    <section id="video">
+      <div id="primary">
+        <div id="nextMeeting" class="nextMeetingArea">
           <div>
-            <button><i class="fa fa-phone" aria-hidden="true"></i><h2>Call</h2></button>
+            <p>Next Meeting</p>
+            <p class="meetingTime">12:00</p>
+            <p>subject</p>
+            <p>organizer</p>
+          </div>
+          <button class="join">Join </button>
+        </div>
+        <div class="futureMeeting">
+          <div>
+            <p class="meetingTime">14:00</p>
+            <p>subject</p>
+            <p>organizer</p>
           </div>
         </div>
-        <aside>
-            <button><i class="fa fa-plus" aria-hidden="true"></i><h4>Add</h4></button>
-        </aside>
-      </section>
-      <section id="video">
-        <div id="primary">
-            <div id="nextMeeting" class="nextMeeting">
-              <p>Current Meeting</p>
-              <p>time</p>
-              <p>subject</p>
-              <p>organizer</p>
-            </div>
-            <div class="futureMeeting">
-              <p>time</p>
-              <p>subject</p>
-              <p>organizer</p>
-            </div>
-            <div class="futureMeeting">
-              <p>time</p>
-              <p>subject</p>
-              <p>organizer</p>
-            </div>
+        <div class="futureMeeting">
+          <div>
+            <p class="meetingTime">15:00</p>
+            <p>subject</p>
+            <p>organizer</p>
+          </div>
         </div>
-        <aside>
-          <button id="addressBook"><i class="fa fa-address-book-o" aria-hidden="true"></i><h4>Address Book</h4></button>
-          <hr>
-          <button><i class="fa fa-search" aria-hidden="true"></i><h4>Zoom</h4></button>
-          <button><i class="fa fa-user-o" aria-hidden="true"></i><h4>Self View</h4></button>
-          <button><i class="fa fa-object-group" aria-hidden="true"></i><h4>Layout</h4></button>
-        </aside>
-      </section>
-    </main>
-    <footer>
-      <div>
-        <button id="volumeMaster" class="footer-btn"> <i class="fa fa-volume-up" aria-hidden="true"></i></button>
-        <button class="footer-btn"> <i class="fa fa-microphone" aria-hidden="true"></i> </button>
       </div>
-      <div>
-        <button class="footer-btn"> <i class="fa fa-cog" aria-hidden="true"></i></button>
-        <button class="footer-btn"> <i class="fa fa-question-circle-o" aria-hidden="true"></i></button>
+      <aside>
+        <button id="phoneBookBtn"><i class="ion-ios-bookmarks-outline"></i><p>Address Book</p></button>
+        <hr>
+        <div class="asideControls">
+          <button><i class="ion-ios-search-strong"></i><p>Zoom</p></button>
+          <button><i class="ion-ios-person-outline"></i><p>Self View</p></button>
+          <button><i class="ion-ios-browsers-outline"></i><p>Layout</p></button>
+        </div>
+      </aside>
+    </section>
+
+    <section id="phonebook">
+      <div id="primary">
+        <div class="textInput">
+          <input type="text" id="inputPhone" placeholder="Search">
+          <button class="transparentButton"><i class="ion-backspace-outline"></i></button>
+        </div>
+
+        <div class="buttonList">
+          <button class="buttonListItem">
+            <i class="ion-ios-videocam-outline"></i><h3 id="ContactName">Common Contact Name</h3>
+          </button>
+          <button class="buttonListItem">
+            <i class="ion-ios-videocam-outline"></i><h3 id="ContactName">Common Contact Name</h3>
+          </button>
+          <button class="buttonListItem">
+            <i class="ion-ios-videocam-outline"></i><h3 id="ContactName">Common Contact Name</h3>
+          </button>
+          <button class="buttonListItem">
+            <i class="ion-ios-videocam-outline"></i><h3 id="ContactName">Common Contact Name</h3>
+          </button>
+          <button class="buttonListItem">
+            <i class="ion-ios-videocam-outline"></i><h3 id="ContactName">Common Contact Name</h3>
+          </button>
+        </div>
       </div>
-      </footer>
+      <aside>
+        <button id="scheduleBtn"><i class="ion-android-menu"></i><p>Schedule</p></button>
+        <hr>
+      </aside>
+    </section>
+
+  </main>
+  <footer>
+    <div class="leftAlign">
+      <button id="volumeMaster" class="footer-btn"><i class="ion-volume-high"></i>Volume</button>
+      <button id="micMute" class="footer-btn"><i id="micIcon" class="ion-ios-mic-outline"></i></i> Mic Mute</button>
+    </div>
+    <div class="rightAlign">
+      <form action="settings.html">
+        <button class="footer-btn"> <i class="ion-ios-gear-outline" ></i></i>Settings</button>
+      </form>
+      <button id="helpButton" class="footer-btn"> <i class="ion-ios-help-outline"></i>Help</button>
+    </div>
+  </footer>
+
+<!-- popups -->
+
+  <div id="popupVolume">
+    <!-- <input type="range" min="0" max="11" value="5" id="volumeFader" class="vertical" orient="vertical"> -->
+    <button id="volumeMasterActive" class="footer-btn"><i class="ion-volume-high"></i></button>
+    <input type="range" min="0" max="11" value="5" id="volumeFader" class="volSlider" >
+  </div>
+
+  <div id="help" class="popup">
+    <button id="close" class="close"><i class="ion-ios-close-outline"></i>Close</button>
+    <div class="popup-content">
+      <i class="ion-ios-information-outline"></i>
+      <p>Please contact IT Customer Service at</p>
+      <h2>1-800-123-4567</h2>
+      <p>for further assistance</p>
+    </div>
+  </div>
 
 
-      <script src="js/jquery-1.12.0.min.js"></script>
-      <script src="js/main.js"></script>
-    </body>
-    </html>
+  <script src="js/jquery-1.12.0.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

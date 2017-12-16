@@ -7,32 +7,49 @@
   <title>AVI-SPL | Connect</title>
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/ionicons.css">
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body onload="startTime()">
   <header>
-    <button class="back"> <i class="fa fa-chevron-left" aria-hidden="true"></i> Back </button>
-    <button>End meeting</button>
-    <h4>Date  Time</h4>
+    <div class="headerFirst">
+      <div id="backBtn" class="navItem">
+        <form action="index.html">
+          <button><i class="ion-ios-arrow-back"></i><p>Back</p></button>
+        </form>
+      </div>
+    </div>
+    <div>
+      <h1>Common Room Name</h1>
+      <h3><strong>Room Phone</strong> 123 456 7890</h3>
+    </div>
+    <div>
+      <span id="txt"></span>
+      <h3><span id="date"></span></h3>
+    </div>
+    <div class="headerLast">
+      <button id="endMeeting">End meeting <i class="icon ion-power"></i></button>
+    </div>
   </header>
-  <nav>
-    <ul>
-      <li><a href="">Audio Volume</a></li>
-      <li><a href="">In Room Camera</a></li>
-    </ul>
-  </nav>
+
   <main>
+    <nav>
+      <div id="navAudioVolumebtn" class="navItem">
+        <button><i class="ion-ios-circle-outline"></i><p>Audio Volume</p></button>
+      </div>
+      <div id="navCamerabtn" class="navItem">
+        <button><i class="ion-ios-circle-outline"></i><p>In-Room Camera</p></button>
+      </div>
+    </nav>
     <div id="audioVolume">
       <div id="primary">
-        <p>Presentation Source</p>
+        <h3>Presentation Source</h3>
         <input type="range" orient="vertical" />
-        <p>Audio Call</p>
+        <h3>Audio Call</h3>
         <input type="range" orient="vertical" />
-        <p>Video Call</p>
+        <h3>Video Call</h3>
         <input type="range" orient="vertical" />
       </div>
       <aside>
@@ -71,17 +88,37 @@
   </main>
 
   <footer>
-    <div>
-      <button class="footer-btn"> <i class="fa fa-volume-up" aria-hidden="true"></i></button>
-      <button class="footer-btn"> <i class="fa fa-microphone" aria-hidden="true"></i> </button>
+    <div class="leftAlign">
+      <button id="volumeMaster" class="footer-btn"><i class="ion-volume-high"></i>Volume</button>
+      <button id="micMute" class="footer-btn"><i id="micIcon" class="ion-ios-mic-outline"></i></i> Mic Mute</button>
     </div>
-    <div>
-      <button class="footer-btn"> <i class="fa fa-cog" aria-hidden="true"></i></button>
-      <button class="footer-btn"> <i class="fa fa-question-circle-o" aria-hidden="true"></i></button>
+    <div class="rightAlign">
+      <form action="settings.html">
+        <button class="footer-btn"> <i class="ion-ios-gear-outline" ></i></i>Settings</button>
+      </form>
+      <button id="helpButton" class="footer-btn"> <i class="ion-ios-help-outline"></i>Help</button>
     </div>
   </footer>
+  <!-- popups -->
 
-  <script src="js/jquery-1.12.0.min.js"></script>
-  <script src="js/main.js"></script>
+    <div id="popupVolume">
+      <!-- <input type="range" min="0" max="11" value="5" id="volumeFader" class="vertical" orient="vertical"> -->
+      <button id="volumeMasterActive" class="footer-btn"><i class="ion-volume-high"></i></button>
+      <input type="range" min="0" max="11" value="5" id="volumeFader" class="volSlider" >
+    </div>
+
+    <div id="help" class="popup">
+      <button id="close" class="close"><i class="ion-ios-close-outline"></i>Close</button>
+      <div class="popup-content">
+        <i class="ion-ios-information-outline"></i>
+        <p>Please contact IT Customer Service at</p>
+        <h2>1-800-123-4567</h2>
+        <p>for further assistance</p>
+      </div>
+    </div>
+
+
+    <script src="js/jquery-1.12.0.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

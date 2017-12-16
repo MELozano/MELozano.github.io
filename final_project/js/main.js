@@ -88,3 +88,111 @@
   //when the user presses #help when the pop up is open
     //help pop up closes
     //footer labels go away
+
+
+//----------------------Date
+var dt = new Date();
+document.getElementById("date").innerHTML = dt.toLocaleDateString();
+
+//----------------------Time
+function startTime() {
+    var today = new Date();
+    var h = today.getHours();
+    var m = today.getMinutes();
+    m = checkTime(m);
+    document.getElementById('txt').innerHTML =
+    h + ":" + m;
+    var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+    return i;
+}
+
+//--------------------Navigation
+$('#presentation').hide();
+$('#phone').hide();
+$('#video').hide();
+$('#phonebook').hide();
+$('#roomCameras').hide();
+$('#audioVolume').hide();
+
+$('#navPrsbtn').on('click', function() {
+  $('#presentation').fadeToggle(300);
+  $('#phone').hide();
+  $('#video').hide();
+  $('#phonebook').hide();
+  $('.navPresentation').addClass('transparentBtnActive');
+});
+$('#navPhonebtn').on('click', function() {
+  $('#presentation').hide();
+  $('#phone').fadeToggle(300);
+  $('#video').hide();
+  $('#phonebook').hide();
+});
+$('#navVideobtn').on('click', function() {
+  $('#presentation').hide();
+  $('#phone').hide();
+  $('#video').fadeToggle(300);
+  $('#phonebook').hide();
+});
+$('#navAudioVolumebtn').on('click', function() {
+  $('#roomCameras').hide();
+  $('#audioVolume').fadeToggle(300);
+});
+$('#navCamerabtn').on('click', function() {
+  $('#roomCameras').fadeToggle(300);
+  $('#audioVolume').hide();
+});
+
+//--------------------phone
+$('#addCall').hide();
+$('#callBtn').on('click', function() {
+  $('#addCall').fadeIn(300);
+});
+
+//--------------------video
+$('#phonebook').hide();
+
+$('#phoneBookBtn').on('click', function() {
+  $('#video').hide();
+  $('#phonebook').fadeToggle(300);
+});
+
+$('#scheduleBtn').on('click', function() {
+  $('#video').fadeToggle(300);
+  $('#phonebook').hide();
+});
+
+$('.asideControls').hide();
+$('.join').on('click', function() {
+  $('.asideControls').fadeToggle(300);
+});
+//-------------------Footer Buttons
+$('#help').hide();
+
+$('#helpButton').on('click', function() {
+  $('#help').fadeIn(300);
+  $('footer').addClass('show');
+});
+
+$('#popupVolume').hide();
+$('#volumeMaster').on('click', function() {
+  $('#popupVolume').fadeIn(300);
+});
+$('#volumeMasterActive').on('click', function() {
+  $('#popupVolume').fadeOut(300);
+});
+
+$('#micMute').on('click', function() {
+  $('#micMute').toggleClass('red');
+  $('#micIcon').toggleClass('ion-ios-mic-outline');
+  $('#micIcon').toggleClass('ion-ios-mic-off');
+});
+
+//----------------Popup Interactions
+
+$('#close').on('click', function() {
+  $('#help').fadeOut(300);
+  $('footer').removeClass('show');
+});

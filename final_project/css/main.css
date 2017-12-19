@@ -56,6 +56,7 @@ main{
   grid-template-columns: 2fr 4fr;
 }
 aside{
+  text-align: center;
 }
 nav{
   position: relative;
@@ -112,25 +113,16 @@ footer{
   align-items: center;
   justify-content: center;
 }
-#dpad{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-column-gap: 10px;
-}
-#control{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-column-gap: 10px;
-  margin: 10% 0;
-  text-align: center;
+.vertical-align button{
+  width: 100%;
+  padding: 10px;
 }
 .cameraselect{
-  display: flex;
+  /*display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: left;*/
 }
 .dropdown{
-  margin-left: 30px;
   background: white;
   border: solid 1px grey;
 }
@@ -138,6 +130,20 @@ footer{
   -webkit-box-shadow: 0px 2px #999;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
   -moz-box-shadow: 0px 2px #999;  /* Firefox 3.5 - 3.6 */
   box-shadow: 0px 2px #999;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+#control{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-column-gap: 10px;
+  text-align: center;
+}
+#dpad{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-row-gap: 5px;
+  grid-column-gap: 5px;
+  text-align: center;
 }
 /* -----------------------
 --------------------------
@@ -190,8 +196,13 @@ button{
   font-size: 1.5em;
 }
 #dpad i{
-  font-size: 4em;
   padding: 10px;
+}
+#dpadIcon{
+  font-size: 5em;
+}
+#control p{
+  font-size: .5em;
 }
 /* -----------------------
 --------------------------
@@ -200,10 +211,10 @@ Buttons
 -------------------------- */
 button, .buttonListItem i{
   background: #535353; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#646464, #474747); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#646464, #474747); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#646464, #474747); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#646464, #474747); /* Standard syntax */
+  background: -webkit-linear-gradient(#646464, #474747); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#646464, #474747); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#646464, #474747); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#646464, #474747); /* Standard syntax */
   border-radius: 0px;
   border: none;
 }
@@ -289,7 +300,7 @@ aside button i{
   font-size: 1.5em;
 }
 .dropbtn{
-  padding: 20px 40px;
+  padding: 10px;
   border: solid 1px grey;
   background: white;
   color: #333;
@@ -302,33 +313,13 @@ aside button i{
   color: #333;
   /*display: none;*/
 }
-.smallbtn{
-  height: 30%;
-  height: 50%;
-}
+/*.smallbtn{
+height: 30%;
+height: 50%;
+}*/
 /*------------dpad---*/
-#dpad button{
-  border: solid grey;
-  border-width: 0 5px 5px 0;
-  display: inline-block;
-  padding: 30px;
-  background: none;
-}
-.dpadArrowUp{
-  transform: rotate(-135deg);
-    -webkit-transform: rotate(-135deg);
-}
-.dpadArrowDown{
-  transform: rotate(45deg);
-      -webkit-transform: rotate(45deg);
-}
-.dpadArrowLeft{
-  transform: rotate(135deg);
-      -webkit-transform: rotate(135deg);
-}
-.dpadArrowRight{
-  transform: rotate(-45deg);
-      -webkit-transform: rotate(-45deg);
+#dpad .transparentButton{
+  font-size: 3em;
 }
 
 /*------------footer------------*/
@@ -486,8 +477,8 @@ Sliders
   position: absolute;
 }
 #popupVolume input.vertical {
-	-webkit-appearance: slider-vertical;
-	writing-mode: bt-lr;
+  -webkit-appearance: slider-vertical;
+  writing-mode: bt-lr;
   display: block;
   width: 90%;
   height: 300px;
@@ -544,7 +535,7 @@ footer button:focus{
   transform: none;
 }
 .transparentBtnActive{
-color: #0097fe;
+  color: #0097fe;
 }
 .redtext{
   color: #d02c44;

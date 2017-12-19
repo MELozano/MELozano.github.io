@@ -1,93 +1,93 @@
 //--------------------- Header -----------------------
-  // When user presses #endMeeting
-    //end meeting pop up will overlay the screen (module)
+// When user presses #endMeeting
+//end meeting pop up will overlay the screen (module)
 
-    // When user presses #confirmEndMeeting
-      //all states return to original
+// When user presses #confirmEndMeeting
+//all states return to original
 
 //--------------------- Navigation -----------------------
 
-  // When user presses #navPresentation
-    //section id #presentation opens
+// When user presses #navPresentation
+//section id #presentation opens
 
-  // When user presses #navPhone
-    //section id #phone opens
+// When user presses #navPhone
+//section id #phone opens
 
-  // When user presses #navVideo
-    //section id #video opens
+// When user presses #navVideo
+//section id #video opens
 
 //--------------------- Phone -----------------------
 
-  // When user presses #call
-    //aside controls appear
-    //call button addClass .endCall
-    //#endMeeting addclass .activeEndMeeting
+// When user presses #call
+//aside controls appear
+//call button addClass .endCall
+//#endMeeting addclass .activeEndMeeting
 
-  // When user presses Add Call
-    //call button removeClass .endCall
-    // text entry field clears
+// When user presses Add Call
+//call button removeClass .endCall
+// text entry field clears
 
-  // When user presses #endCall
-    //end call pop up will overlay the screen (module)
+// When user presses #endCall
+//end call pop up will overlay the screen (module)
 
-    // When user presses #confirmEndCall
-      //call button removeClass .endCall
-      //aside asidePhone hidden
+// When user presses #confirmEndCall
+//call button removeClass .endCall
+//aside asidePhone hidden
 
 
 //--------------------- Video -----------------------
-  // When user presses #navVideo
-    //section id #video opens
+// When user presses #navVideo
+//section id #video opens
 
-  // When user presses #nextMeeting
-    //#nextMeeting addClass .currentMeeting
-    //additional control buttons appear in aside
+// When user presses #nextMeeting
+//#nextMeeting addClass .currentMeeting
+//additional control buttons appear in aside
 
-  //When user presses #addressBook
-    //#directory appears
+//When user presses #addressBook
+//#directory appears
 
-    //when user selects text field
-      //keyboard opens
-    //when user selects #schedule
-      // #video appears
+//when user selects text field
+//keyboard opens
+//when user selects #schedule
+// #video appears
 
 
 
 //--------------------- Settings -----------------------
 // When user presses #settings
-  //password pop up appears
-  //cancel will close pop up
-  //password and pressing enter will change to settings page
+//password pop up appears
+//cancel will close pop up
+//password and pressing enter will change to settings page
 
-  //when user selects #navAudio
-    //section id #audioVolume opens
+//when user selects #navAudio
+//section id #audioVolume opens
 
-    //when user selects #reset
-      //the sliders on the page reset to 50%
+//when user selects #reset
+//the sliders on the page reset to 50%
 
-  //when user selects #navCamera
-    //section id #roomCameras opens
+//when user selects #navCamera
+//section id #roomCameras opens
 
-    //when the user presses the preset dropdown button
-      //the preset list will drop down
+//when the user presses the preset dropdown button
+//the preset list will drop down
 
 
 //--------------------- Volume -----------------------
-  //When user presses #volumeMaster
-    // a slider will overlay over the button in the lower left hand corner.
+//When user presses #volumeMaster
+// a slider will overlay over the button in the lower left hand corner.
 
-    //when the user touched the speaker icon again
-      // the slider pop up will close.
+//when the user touched the speaker icon again
+// the slider pop up will close.
 
 
 //--------------------- Help -----------------------
- //When user presses #Help
-  // help pop up
-  // footer buttons will show labels
+//When user presses #Help
+// help pop up
+// footer buttons will show labels
 
-  //when the user presses #help when the pop up is open
-    //help pop up closes
-    //footer labels go away
+//when the user presses #help when the pop up is open
+//help pop up closes
+//footer labels go away
 
 
 //----------------------Date
@@ -97,17 +97,17 @@ document.getElementById("date").innerHTML = dt.toLocaleDateString();
 
 //----------------------Time
 function startTime() {
-    var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    m = checkTime(m);
-    document.getElementById('txt').innerHTML =
-    h + ":" + m;
-    var t = setTimeout(startTime, 500);
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  m = checkTime(m);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m;
+  var t = setTimeout(startTime, 500);
 }
 function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-    return i;
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
 }
 
 //--------------------Navigation
@@ -217,12 +217,12 @@ $('#cancelEndMeeting').on('click', function() {
 // Create a variable phoneNumber to hold the full phone number and set it to an empty string ""
 var phoneNumber = "";
 $('.keypad button').on('click', function() {
-// When the user clicks a button in the .keypad
-  var keyNumber = $(this).attr('data-number');
-// Find out which key the user pressed and save it in a variable keyNumber
+  // When the user clicks a button in the .keypad
+  var keyNumber = $(this).attr('value');
+  // Find out which key the user pressed and save it in a variable keyNumber
   $("#phoneNumBox").val(phoneNumber += keyNumber);
 });
-  // Add that key to the existing phone number (if there is one) using +=
+// Add that key to the existing phone number (if there is one) using +=
 // Replace the value of the input to the full phone number, including the most recent key
 // Hint: use the .val() method in jQuery
 $('#del').on('click', function() {

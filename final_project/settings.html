@@ -59,39 +59,39 @@
 
     <div id="roomCameras">
       <div id="primary">
-        <div class="cameraselect">
-          <p>In Room Camera Presets</p>
-          <div class="dropdown">
-            <button class="dropbtn"> Select Preset </button>
-            <div id="dropdownList" class="dropdown-content">
-              <button>Preset 1</button>
-              <button>Preset 2</button>
-              <button>Preset 3</button>
-            </div>
-          </div>
-        </div>
+        <h3>Camera Controls</h3><hr>
         <div id="control">
           <div class="vertical-align">
-            <button class="smallbtn"> <i class="ion-ios-plus-outline"></i></button>
+            <button class="transparentButton"> <i class="ion-ios-plus-outline"></i><p>Zoom In</p></button>
           </div>
           <div id="dpad">
-            <button class="dpadArrowLeft"></button>
-            <div>
-              <button class="dpadArrowUp"> </button>
-              <div class="vertical-align">
-                <i class="ion-ios-videocam" ></i>
-              </div>
-              <button class="dpadArrowDown"></button>
+            <div></div>
+            <button class="transparentButton"><i class="ion-chevron-up" ></i> </button>
+            <div></div>
+            <button class="transparentButton"><i class="ion-chevron-left" ></i></button>
+            <div id="dpadIcon" class="vertical-align">
+              <i class="ion-ios-videocam" ></i>
             </div>
-            <button class="dpadArrowRight"></button>
-
+            <button class="transparentButton"><i class="ion-chevron-right" ></i></button>
+            <div></div>
+            <button class="transparentButton"><i class="ion-chevron-down" ></i></button>
+            <div></div>
           </div>
           <div class="vertical-align">
-            <button class="smallbtn"> <i class="ion-ios-plus-outline"></i></button>
+            <button class="transparentButton"> <i class="ion-ios-minus-outline"></i><p>Zoom Out</p></button>
           </div>
         </div>
       </div>
       <aside>
+        <p>In Room Camera Presets</p><br>
+        <div class="dropdown">
+          <button class="dropbtn"> Select Preset </button>
+          <div id="dropdownList" class="dropdown-content">
+            <button>Preset 1</button>
+            <button>Preset 2</button>
+            <button>Preset 3</button>
+          </div>
+        </div>
       </aside>
     </div>
   </main>

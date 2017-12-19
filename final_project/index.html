@@ -61,8 +61,8 @@
     <section id="phone">
       <div id="primary">
         <div class="textInput">
-          <input type="text" id="inputPhone" placeholder="Dial Phone #">
-          <button class="transparentButton"><i class="ion-backspace-outline"></i></button>
+          <input type="text" id="phoneNumBox" placeholder="Dial Phone #">
+          <button id="del" class="transparentButton"><i class="ion-backspace-outline"></i></button>
         </div>
         <div class="keypad">
           <button>1</button>
@@ -78,7 +78,7 @@
           <button>0</button>
           <button>#</button>
         </div>
-        <button id="callBtn" class="green"><i class="ion-ios-telephone-outline"></i>Call</button>
+        <button id="callBtn" class="green">Call</button>
       </div>
       <aside id="addCall">
         <button id="addCallBtn"><i class="ion-ios-personadd-outline"></i><p>Add Call</p></button>
@@ -170,7 +170,6 @@
 <!-- popups -->
 
   <div id="popupVolume">
-    <!-- <input type="range" min="0" max="11" value="5" id="volumeFader" class="vertical" orient="vertical"> -->
     <button id="volumeMasterActive" class="footer-btn"><i class="ion-volume-high"></i></button>
     <input type="range" min="0" max="11" value="5" id="volumeFader" class="volSlider" >
   </div>
@@ -182,6 +181,18 @@
       <p>Please contact IT Customer Service at</p>
       <h2>1-800-123-4567</h2>
       <p>for further assistance</p>
+    </div>
+  </div>
+
+  <div id="endAll" class="popup">
+    <div class="popup-content">
+      <i class="icon ion-power"></i>
+      <h1>Are you sure you want<br>to end the meeting?</h1>
+      <p>This will end all presentations, phone calls, and video calls.</p>
+      <div id="popupBtns">
+        <button class="red">End Meeting</button>
+        <button id="cancelEndMeeting">Cancel</button>
+      </div>
     </div>
   </div>
 

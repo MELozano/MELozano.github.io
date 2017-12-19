@@ -59,27 +59,36 @@
 
     <div id="roomCameras">
       <div id="primary">
-        <div class="dropdown">
+        <div class="cameraselect">
           <p>In Room Camera Presets</p>
-          <button class="dropbtn"> Preset </button>
-          <div id="myDropdown" class="dropdown-content">
-            <a href="#">Preset 1</a>
-            <a href="#">Preset 2</a>
-            <a href="#">Preset 3</a>
+          <div class="dropdown">
+            <button class="dropbtn"> Select Preset </button>
+            <div id="dropdownList" class="dropdown-content">
+              <button>Preset 1</button>
+              <button>Preset 2</button>
+              <button>Preset 3</button>
+            </div>
           </div>
         </div>
         <div id="control">
-          <button> <i class="fa fa-search-minus" aria-hidden="true"></i></button>
+          <div class="vertical-align">
+            <button class="smallbtn"> <i class="ion-ios-plus-outline"></i></button>
+          </div>
           <div id="dpad">
+            <button class="dpadArrowLeft"></button>
             <div>
-            <button class="dpadArrowUp"></button>
-            <i class="fa fa-video-camera" aria-hidden="true"></i>
-            <button class="dpadArrowDown"></button>
+              <button class="dpadArrowUp"> </button>
+              <div class="vertical-align">
+                <i class="ion-ios-videocam" ></i>
+              </div>
+              <button class="dpadArrowDown"></button>
             </div>
             <button class="dpadArrowRight"></button>
-            <button class="dpadArrowLeft"></button>
+
           </div>
-          <button> <i class="fa fa-search-plus" aria-hidden="true"></i></button>
+          <div class="vertical-align">
+            <button class="smallbtn"> <i class="ion-ios-plus-outline"></i></button>
+          </div>
         </div>
       </div>
       <aside>
@@ -101,24 +110,35 @@
   </footer>
   <!-- popups -->
 
-    <div id="popupVolume">
-      <!-- <input type="range" min="0" max="11" value="5" id="volumeFader" class="vertical" orient="vertical"> -->
-      <button id="volumeMasterActive" class="footer-btn"><i class="ion-volume-high"></i></button>
-      <input type="range" min="0" max="11" value="5" id="volumeFader" class="volSlider" >
-    </div>
+  <div id="popupVolume">
+    <button id="volumeMasterActive" class="footer-btn"><i class="ion-volume-high"></i></button>
+    <input type="range" min="0" max="11" value="5" id="volumeFader" class="volSlider" >
+  </div>
 
-    <div id="help" class="popup">
-      <button id="close" class="close"><i class="ion-ios-close-outline"></i>Close</button>
-      <div class="popup-content">
-        <i class="ion-ios-information-outline"></i>
-        <p>Please contact IT Customer Service at</p>
-        <h2>1-800-123-4567</h2>
-        <p>for further assistance</p>
+  <div id="help" class="popup">
+    <button id="close" class="close"><i class="ion-ios-close-outline"></i>Close</button>
+    <div class="popup-content">
+      <i class="ion-ios-information-outline"></i>
+      <p>Please contact IT Customer Service at</p>
+      <h2>1-800-123-4567</h2>
+      <p>for further assistance</p>
+    </div>
+  </div>
+
+  <div id="endAll" class="popup">
+    <div class="popup-content">
+      <i class="icon ion-power"></i>
+      <h1>Are you sure you want<br>to end the meeting?</h1>
+      <p>This will end all presentations, phone calls, and video calls.</p>
+      <div id="popupBtns">
+        <button class="red">End Meeting</button>
+        <button id="cancelEndMeeting">Cancel</button>
       </div>
     </div>
+  </div>
 
 
-    <script src="js/jquery-1.12.0.min.js"></script>
-    <script src="js/main.js"></script>
+  <script src="js/jquery-1.12.0.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

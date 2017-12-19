@@ -91,37 +91,54 @@ footer{
   align-items: center;
   justify-content: left;
 }
+#popupBtns{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  height: 65px;
+  margin-top: 45px;
+}
+#endAll{
+  z-index: 400;
+}
 .rightAlign{
   text-align: right;
 }
 .leftAlign{
   text-align: left;
 }
-
-/* -----------------------
---------------------------
-hides
---------------------------
---------------------------*/
-/*#presentation{
-  display: none;
-}*/
-/*#phone{
-  display: none;
+.vertical-align{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#video{
-  display: none;
+#dpad{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
 }
-#phonebook{
-  display: none;
-}*/
-/*#audioVolume{
-  display: none;
-}*/
-/*#roomCameras{
-  display: none;
-}*/
-
+#control{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  margin: 10% 0;
+  text-align: center;
+}
+.cameraselect{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.dropdown{
+  margin-left: 30px;
+  background: white;
+  border: solid 1px grey;
+}
+#dropdownList{
+  -webkit-box-shadow: 0px 2px #999;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow: 0px 2px #999;  /* Firefox 3.5 - 3.6 */
+  box-shadow: 0px 2px #999;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
 /* -----------------------
 --------------------------
 Typography
@@ -157,7 +174,7 @@ button{
   font-size: 1.25em;
   color: #999;
 }
-.nextMeetingArea, .futureMeeting, .nextMeetingArea h3{
+.nextMeetingArea, .futureMeeting, .nextMeetingArea h3, #endAll h1{
   color: white;
 }
 .meetingTime{
@@ -166,7 +183,16 @@ button{
 #backBtn{
   border: none;
 }
-
+#endAll p{
+  margin: 30px;
+}
+#endAll button{
+  font-size: 1.5em;
+}
+#dpad i{
+  font-size: 4em;
+  padding: 10px;
+}
 /* -----------------------
 --------------------------
 Buttons
@@ -261,6 +287,48 @@ aside button i{
   border-radius: 100px;
   border: 2px solid white;
   font-size: 1.5em;
+}
+.dropbtn{
+  padding: 20px 40px;
+  border: solid 1px grey;
+  background: white;
+  color: #333;
+}
+.dropdown-content button{
+  display: block;
+  width: 100%;
+  background: white;
+  padding: 20px;
+  color: #333;
+  /*display: none;*/
+}
+.smallbtn{
+  height: 30%;
+  height: 50%;
+}
+/*------------dpad---*/
+#dpad button{
+  border: solid grey;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 30px;
+  background: none;
+}
+.dpadArrowUp{
+  transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+.dpadArrowDown{
+  transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+}
+.dpadArrowLeft{
+  transform: rotate(135deg);
+      -webkit-transform: rotate(135deg);
+}
+.dpadArrowRight{
+  transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
 }
 
 /*------------footer------------*/
@@ -477,6 +545,9 @@ footer button:focus{
 }
 .transparentBtnActive{
 color: #0097fe;
+}
+.redtext{
+  color: #d02c44;
 }
 /* -----------------------
 --------------------------

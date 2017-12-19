@@ -91,6 +91,7 @@
 
 
 //----------------------Date
+
 var dt = new Date();
 document.getElementById("date").innerHTML = dt.toLocaleDateString();
 
@@ -149,6 +150,7 @@ $('#navCamerabtn').on('click', function() {
 $('#addCall').hide();
 $('#callBtn').on('click', function() {
   $('#addCall').fadeIn(300);
+  $("#endMeeting").toggleClass("redtext");
 });
 
 //--------------------video
@@ -165,8 +167,12 @@ $('#scheduleBtn').on('click', function() {
 });
 
 $('.asideControls').hide();
+
 $('.join').on('click', function() {
-  $('.asideControls').fadeToggle(300);
+  $('.asideControls').fadeToggle(300)
+  $(this).text($(this).text() == 'End Meeting' ? 'Join' : 'End Meeting');
+  $('#nextMeeting').toggleClass('red');
+  $("#endMeeting").toggleClass("redtext");
 });
 //-------------------Footer Buttons
 $('#help').hide();
@@ -190,9 +196,51 @@ $('#micMute').on('click', function() {
   $('#micIcon').toggleClass('ion-ios-mic-off');
 });
 
+$('#endAll').hide();
+
+$('#endMeeting').on('click', function() {
+  $('#endAll').fadeIn(300);
+});
+
 //----------------Popup Interactions
 
 $('#close').on('click', function() {
   $('#help').fadeOut(300);
   $('footer').removeClass('show');
+});
+
+$('#cancelEndMeeting').on('click', function() {
+  $('#endAll').fadeOut(300);
+});
+
+//----------------Keypad
+// Create a variable phoneNumber to hold the full phone number and set it to an empty string ""
+var phoneNumber = "";
+$('.keypad button').on('click', function() {
+// When the user clicks a button in the .keypad
+  var keyNumber = $(this).attr('data-number');
+// Find out which key the user pressed and save it in a variable keyNumber
+  $("#phoneNumBox").val(phoneNumber += keyNumber);
+});
+  // Add that key to the existing phone number (if there is one) using +=
+// Replace the value of the input to the full phone number, including the most recent key
+// Hint: use the .val() method in jQuery
+$('#del').on('click', function() {
+  phoneNumber = "";
+  $("input:text").val(phoneNumber);
+});
+
+//-----------call/join buttons
+$('#callBtn').on('click', function () {
+  $(this).text($(this).text() == 'Call' ? 'End' : 'Call');
+  $('#callBtn').toggleClass('red');
+});
+
+$('.join').on('click', function () {
+});
+
+//-----------Dropdown list
+$('#dropdownList').hide();
+$('.dropbtn').on('click', function() {
+  $('#dropdownList').slideToggle(300);
 });

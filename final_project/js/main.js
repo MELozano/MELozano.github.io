@@ -123,7 +123,8 @@ $('#navPrsbtn').on('click', function() {
   $('#phone').hide();
   $('#video').hide();
   $('#phonebook').hide();
-  $('.navPresentation').addClass('transparentBtnActive');
+  // $('.navPresentation').addClass('transparentBtnActive');
+  //   $('.navPresentation').removeClass('transparentBtnActive');
 });
 $('#navPhonebtn').on('click', function() {
   $('#presentation').hide();
@@ -234,9 +235,6 @@ $('#del').on('click', function() {
 $('#callBtn').on('click', function () {
   $(this).text($(this).text() == 'Call' ? 'End' : 'Call');
   $('#callBtn').toggleClass('red');
-});
-
-$('.join').on('click', function () {
 });
 
 //-----------Dropdown list

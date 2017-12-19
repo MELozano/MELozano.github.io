@@ -313,10 +313,7 @@ aside button i{
   color: #333;
   /*display: none;*/
 }
-/*.smallbtn{
-height: 30%;
-height: 50%;
-}*/
+
 /*------------dpad---*/
 #dpad .transparentButton{
   font-size: 3em;
@@ -534,10 +531,10 @@ footer button:focus{
 .show {
   transform: none;
 }
-.transparentBtnActive{
+.navItem .transparentBtnActive{
   color: #0097fe;
 }
-.redtext{
+.headerLast .redtext{
   color: #d02c44;
 }
 /* -----------------------

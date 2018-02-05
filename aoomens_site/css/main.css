@@ -165,7 +165,6 @@ Responsive
 @media only screen and (max-width: 875px) {
   #cover{
     background-position: 30% 0;
-    background-attachment: scroll;
     position: relative;
   }
   #cover nav #logo{
@@ -184,18 +183,17 @@ Responsive
 }
 
 @media only screen and (max-width: 650px) {
-body{
-  margin: 0 auto;
-}
   section{
     display: grid;
     grid-template-columns: 1fr;
     padding: 50px;
   }
   body{
+    margin: 0 auto;
     font-size: 15px;
   }
   #cover{
     background-position: 50% 0;
+    background-attachment: scroll;
   }
 }

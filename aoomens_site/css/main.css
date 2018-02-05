@@ -165,6 +165,7 @@ Responsive
   #cover{
     background-position: 50% 0;
   	height: 80vh;
+	  background-attachment:scroll
     color: white;
   }
 }

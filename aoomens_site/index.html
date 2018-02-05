@@ -102,11 +102,12 @@
       </div>
       <div id="content">
         <form action="https://formspree.io/aoomens@gmail.com" method="post">
-          <input type="text" id="name" placeholder="Full Name *">
+          <input type="text" id="name" placeholder="Full Name *" name="name">
           <p id="errorName">A name is required to participate in a functioning society.</p>
-          <input type="email" id="email" placeholder="Email *">
+          <input type="email" id="email" placeholder="Email *" name="_replyto">
           <p id="errorEmail">You forgot to enter an email ya goof.</p>
-          <input type="text" placeholder="Subject">
+          <input type="text" placeholder="Subject" name="_subject">
+          <input type="text" name="_gotcha" style="display:none" />
           <textarea placeholder="Message"></textarea>
           <button type="submit">Submit</button>
         </form>

@@ -59,7 +59,7 @@ header
   background: url('../img/amy-hero-img.jpg');
   background-size: cover;
   background-attachment: fixed;
-  background-position: 30% 0;
+  background-position: 10% 0;
 	height: 80vh;
   color: white;
 }
@@ -164,10 +164,11 @@ Responsive
     background-attachment: scroll;
     position: relative;
   }
-  #cover logo{
+  #cover nav #logo{
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50px;
+    padding-right: 30px;
   }
   #cover h1{
     position: absolute;

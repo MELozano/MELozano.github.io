@@ -25,6 +25,7 @@ section:nth-child(even) {background: #FFF}
 
 body{
   margin: 0 auto;
+  height: 100vh;
   font-family: 'Roboto Condensed', sans-serif;
   font-weight: 300;
   font-size: 18px;

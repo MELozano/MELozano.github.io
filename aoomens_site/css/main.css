@@ -58,8 +58,9 @@ header
   background-color: var(--accent);
   background: url('../img/amy-hero-img.jpg');
   background-size: auto 100%;
+  background-attachment: fixed;
   background-position: 50% 0;
-	height: 100vh;
+	height: 80vh;
   color: white;
 }
 /* ----------------------------------------

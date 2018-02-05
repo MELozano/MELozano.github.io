@@ -1,0 +1,169 @@
+
+/* --------------------------------------------------------------------------
+Base styles:
+----------------------------------------------------------------------------- */
+:root {
+    --accent: #d7ac39;
+}
+
+/* Fix to include padding and border in the total width for each element */
+* {
+  box-sizing: border-box;
+}
+
+/* Fix for responsive images */
+img {
+  max-width: 100%;
+}
+section{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px;
+}
+section:nth-child(odd) {background: #e3e3e3}
+section:nth-child(even) {background: #FFF}
+
+body{
+  margin: 0 auto;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: #333;
+  letter-spacing: 1px;
+  line-height: 2em;
+}
+
+.center{
+  text-align: center;
+}
+
+#job{
+  margin-bottom: 90px;
+}
+#highlights, #experience, #education{
+  margin-bottom: 80px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #999;
+}
+
+ul{
+  padding-left: 20px;
+}
+/* ----------------------------------------
+header
+------------------------------------------- */
+#cover{
+  background-color: var(--accent);
+  background: url('../img/amy-hero-img.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 30% 0;
+	height: 80vh;
+  color: white;
+}
+/* ----------------------------------------
+Footer
+------------------------------------------- */
+footer{
+  margin: 0;
+  padding: 50px;
+  background-color: var(--accent);
+  text-align: center;
+}
+/* ----------------------------------------
+Type
+------------------------------------------- */
+h2{
+  font-size: 2em;
+}
+h3{
+  font-size: 1.5em;
+  margin-bottom: 40px;
+}
+.title{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.employer, .date{
+  font-style: italic;
+  margin: 0;
+}
+/* ----------------------------------------
+Form
+------------------------------------------- */
+form {
+	margin: 0px auto;
+	max-width: 700px;
+	padding: 20px 0;
+	border-radius: 3px;
+}
+
+input,
+textarea {
+  background: white;
+	border: none;
+	padding: 10px 15px;
+	border-radius: 2px;
+	display: block;
+	width: 100%;
+	margin-bottom: 8px;
+	font-size: 16px;
+	outline: none;
+	transition: border .3s ease;
+}
+
+textarea {
+	height: 250px;
+}
+
+input:focus,
+textarea:focus {
+	border: 1px solid #005EC8;
+}
+
+button {
+	background-color: var(--accent);
+	border: 0;
+	color: black;
+	font-size: 18px;
+	display: block;
+	outline: 0;
+	padding: 8px 10px;
+	width: 100%;
+	margin-top: 20px;
+	transition: transform .3s ease;
+}
+
+button:hover {
+	transform: translateY(-2px);
+}
+
+.error{
+	border: 2px solid red;
+}
+
+#errorName, #errorEmail{
+	color: red;
+	display: none;
+}
+
+
+
+/* ----------------------------------------
+Responsive
+------------------------------------------- */
+@media only screen and (max-width: 650px) {
+  section{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 50px;
+  }
+  body{
+    font-size: 15px;
+  }
+  #cover{
+    background-position: 50% 0;
+  	height: 80vh;
+    color: white;
+  }
+}

@@ -165,8 +165,9 @@ Responsive
     position: relative;
   }
   #cover nav #logo{
+    display: none;
     position: absolute;
-    top: 0;
+    top: 20px;
     left: 50px;
     padding-right: 30px;
   }

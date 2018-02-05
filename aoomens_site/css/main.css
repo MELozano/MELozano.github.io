@@ -24,7 +24,8 @@ section:nth-child(odd) {background: #e3e3e3}
 section:nth-child(even) {background: #FFF}
 
 body{
-  margin: 0 auto;
+  margin: 20px;
+  background-color: #fff;
   font-family: 'Lora', Georgia, Times, 'Times New Roman', serif;
   font-weight: 400;
   font-size: 18px;

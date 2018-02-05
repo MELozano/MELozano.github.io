@@ -164,11 +164,11 @@ Responsive
     background-attachment: scroll;
     position: relative;
   }
-  /*#cover logo{
+  #cover logo{
     position: absolute;
     top: 0;
     left: 0;
-  }*/
+  }
   #cover h1{
     position: absolute;
     bottom: 20px;
